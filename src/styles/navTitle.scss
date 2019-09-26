@@ -1,0 +1,25 @@
+@import "./_variables.scss";
+
+.NavTitle__Title {
+  color: $navTitle__title--text-color;
+}
+
+.NavTitle__Button {
+  color: $navTitle__button--text-color !important;
+  background-color: $navTitle__button--bg-color !important;
+}
+
+.NavTitle__Container {
+  background-color: $navTitle__container--bg-color;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: $navTitle__container--padding-top;
+  /* margin-left: (100vw - $container__width) / 2; */
+
+  height: $navTitle__container--height;
+  width: $navTitle__container--width;
+}
