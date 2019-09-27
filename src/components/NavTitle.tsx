@@ -1,5 +1,4 @@
 import * as React from "react";
-import "../styles/navTitle.scss";
 import { Button } from "reactstrap";
 
 const NavTitle: React.FC = () => {

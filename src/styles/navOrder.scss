@@ -2,4 +2,18 @@
 
 .NavOrder__Button {
   font-size: $navOrder__button--font-size !important;
+  position: relative !important;
+
+  &--Aluno {
+    margin-left: $navOrder__buttonAluno--ml;
+  }
+  &--Situacao {
+    margin-left: $navOrder__buttonSituacao--ml;
+  }
+  &--Papel {
+    margin-left: $navOrder__buttonPapel--ml;
+  }
+  &--Atualizado {
+    margin-left: $navOrder__buttonAtualizado--ml;
+  }
 }

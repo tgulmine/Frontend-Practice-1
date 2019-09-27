@@ -1,0 +1,16 @@
+@import "./_variables.scss";
+
+.Card__Trash {
+  background-image: url(../images/trash.png);
+  height: $card__imageTrash--size;
+  width: $card__imageTrash--size;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-self: center;
+
+  &--Border {
+    width: $card__borderTrash--size;
+    height: $card__borderTrash--size;
+  }
+}

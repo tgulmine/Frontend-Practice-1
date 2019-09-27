@@ -1,4 +1,11 @@
 @import "./_variables.scss";
+
+@import "./card.scss";
+@import "./formAdd.scss";
+@import "./navOrder.scss";
+@import "./navSearch.scss";
+@import "./navTitle.scss";
+
 @import url("https://fonts.googleapis.com/css?family=Raleway:300&display=swap");
 
 $main__container--bg-color: #f0f0f0;

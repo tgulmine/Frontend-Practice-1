@@ -1,5 +1,4 @@
 import * as React from "react";
-import "../styles/navSearch.scss";
 import {
   ButtonDropdown,
   DropdownItem,

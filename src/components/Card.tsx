@@ -2,7 +2,7 @@ import * as React from "react";
 import { Input, Button } from "reactstrap";
 import { useState } from "react";
 
-const NavOrder: React.FC = () => {
+const Card: React.FC = () => {
   const [buttonAluno, setButtonAluno] = useState(false);
   const [buttonSituacao, setButtonSituacao] = useState(false);
   const [buttonPapel, setButtonPapel] = useState(false);
@@ -20,7 +20,7 @@ const NavOrder: React.FC = () => {
   }
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-gray w-100">
+    <nav className="navbar navbar-expand-lg navbar-light bg-white w-100 border-top">
       <Input
         type="checkbox"
         id="checkboxOrder"
@@ -54,8 +54,11 @@ const NavOrder: React.FC = () => {
       >
         Atualizado em
       </Button>
+      <div className="Card__Trash--Border border d-flex justify-content-center align-items-center">
+        <div className="Card__Trash"></div>
+      </div>
     </nav>
   );
 };
 
-export default NavOrder;
+export default Card;
