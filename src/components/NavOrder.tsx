@@ -1,23 +1,68 @@
 import * as React from "react";
 import { Input, Button } from "reactstrap";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faAngleUp,
+  faAngleDown,
+  faArrowsAltV
+} from "@fortawesome/free-solid-svg-icons";
+
+const ALUNO = "aluno";
+const UPDATE_AT = "updateAt";
+
+interface IOrderMap {
+  [key: string]: { active: boolean; isUp: boolean };
+}
 
 const NavOrder: React.FC = () => {
-  const [buttonAluno, setButtonAluno] = useState(false);
-  const [buttonSituacao, setButtonSituacao] = useState(false);
-  const [buttonPapel, setButtonPapel] = useState(false);
-  const [buttonAtualizado, setButtonAtualizado] = useState(false);
+  const [orderMap, setOrderMap] = useState<IOrderMap>({
+    aluno: {
+      active: true,
+      isUp: true
+    },
+    updatedAt: {
+      active: false,
+      isUp: false
+    },
+    situation: {
+      active: false,
+      isUp: false
+    }
+  });
 
-  function setActiveButton(buttonPressed: number) {
-    setButtonAluno(false);
-    setButtonSituacao(false);
-    setButtonPapel(false);
-    setButtonAtualizado(false);
-    if (buttonPressed === 1) setButtonAluno(true);
-    else if (buttonPressed === 2) setButtonSituacao(true);
-    else if (buttonPressed === 3) setButtonPapel(true);
-    else if (buttonPressed === 4) setButtonAtualizado(true);
-  }
+  const getIcon = (name: string) => {
+    const orderable = orderMap[name];
+
+    if (!orderable.active) {
+      return faArrowsAltV;
+    }
+    if (orderable.isUp) {
+      return faAngleUp;
+    }
+
+    return faAngleDown;
+  };
+
+  const onClickOrderable = (name: string) => {
+    const orderable = orderMap[name];
+
+    if (orderable.active) {
+      setOrderMap({
+        ...orderMap,
+        [name]: {
+          ...orderable,
+          isUp: !orderable.isUp
+        }
+      });
+    } else {
+      let newOrderMap: IOrderMap = {};
+      Object.keys(orderMap).forEach(key => {
+        newOrderMap[key] = { active: name === key ? true : false, isUp: false };
+      });
+      setOrderMap(newOrderMap);
+    }
+  };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-gray w-100">
@@ -28,31 +73,36 @@ const NavOrder: React.FC = () => {
       />
       <Button
         className="bg-transparent border-0 text-dark text-uppercase font-weight-bold NavOrder__Button NavOrder__Button--Aluno"
-        active={buttonAluno}
-        onClick={() => setActiveButton(1)}
+        onClick={() => {
+          onClickOrderable(ALUNO);
+        }}
       >
-        Aluno
+        <span className="mr-1">Aluno</span>
+        <FontAwesomeIcon icon={getIcon("aluno")} />
       </Button>
       <Button
         className="bg-transparent border-0 text-dark text-uppercase font-weight-bold NavOrder__Button NavOrder__Button--Situacao"
-        active={buttonSituacao}
-        onClick={() => setActiveButton(2)}
+        onClick={() => {
+          onClickOrderable("situation");
+        }}
       >
-        Situação
+        <span className="mr-1">Situação</span>
+        <FontAwesomeIcon icon={getIcon("situation")} />
       </Button>
       <Button
         className="bg-transparent border-0 text-dark text-uppercase font-weight-bold NavOrder__Button NavOrder__Button--Papel"
-        active={buttonPapel}
-        onClick={() => setActiveButton(3)}
+        disabled
       >
         Papel
       </Button>
       <Button
         className="bg-transparent border-0 text-dark text-uppercase font-weight-bold NavOrder__Button NavOrder__Button--Atualizado"
-        active={buttonAtualizado}
-        onClick={() => setActiveButton(4)}
+        onClick={() => {
+          onClickOrderable("updatedAt");
+        }}
       >
-        Atualizado em
+        <span className="mr-1">Atualizado em</span>
+        <FontAwesomeIcon icon={getIcon("updatedAt")} />
       </Button>
     </nav>
   );

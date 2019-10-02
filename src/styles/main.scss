@@ -19,7 +19,7 @@ body {
 .Main__Container {
   background-color: $main__container--bg-color;
   height: 100vh;
-  width: $main__container--width;
+  /* width: $main__container--width; */
 
-  margin-left: (100vw - $main__container--width) / 2;
+  /* margin-left: (100vw - $main__container--width) / 2; */
 }
