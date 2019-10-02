@@ -1,0 +1,25 @@
+@import "../../styles/_variables.scss";
+
+.Header__Title {
+  color: $header__title--text-color;
+}
+
+.Header__Button {
+  color: $header__button--text-color !important;
+  background-color: $header__button--bg-color !important;
+}
+
+.Header__Container {
+  background-color: $header__container--bg-color;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: $header__container--padding-top;
+  /* margin-left: (100vw - $container__width) / 2; */
+
+  height: $header__container--height;
+  width: $header__container--width;
+}

@@ -1,8 +1,9 @@
 import * as React from "react";
+import "./userBlock.scss";
 import { Input, Button } from "reactstrap";
 import { useState } from "react";
 
-const Card: React.FC = () => {
+const UserBlock: React.FC = () => {
   const [buttonAluno, setButtonAluno] = useState(false);
   const [buttonSituacao, setButtonSituacao] = useState(false);
   const [buttonPapel, setButtonPapel] = useState(false);
@@ -27,38 +28,38 @@ const Card: React.FC = () => {
         className="position-relative ml-0"
       />
       <Button
-        className="bg-transparent border-0 text-dark text-uppercase font-weight-bold NavOrder__Button NavOrder__Button--Aluno"
+        className="bg-transparent border-0 text-dark text-uppercase font-weight-bold OrderBar__Button OrderBar__Button--Aluno"
         active={buttonAluno}
         onClick={() => setActiveButton(1)}
       >
         Aluno
       </Button>
       <Button
-        className="bg-transparent border-0 text-dark text-uppercase font-weight-bold NavOrder__Button NavOrder__Button--Situacao"
+        className="bg-transparent border-0 text-dark text-uppercase font-weight-bold OrderBar__Button OrderBar__Button--Situacao"
         active={buttonSituacao}
         onClick={() => setActiveButton(2)}
       >
         Situação
       </Button>
       <Button
-        className="bg-transparent border-0 text-dark text-uppercase font-weight-bold NavOrder__Button NavOrder__Button--Papel"
+        className="bg-transparent border-0 text-dark text-uppercase font-weight-bold OrderBar__Button OrderBar__Button--Papel"
         active={buttonPapel}
         onClick={() => setActiveButton(3)}
       >
         Papel
       </Button>
       <Button
-        className="bg-transparent border-0 text-dark text-uppercase font-weight-bold NavOrder__Button NavOrder__Button--Atualizado"
+        className="bg-transparent border-0 text-dark text-uppercase font-weight-bold OrderBar__Button OrderBar__Button--Atualizado"
         active={buttonAtualizado}
         onClick={() => setActiveButton(4)}
       >
         Atualizado em
       </Button>
-      <div className="Card__Trash--Border border d-flex justify-content-center align-items-center">
-        <div className="Card__Trash"></div>
+      <div className="UserBlock__Trash--Border border d-flex justify-content-center align-items-center">
+        <div className="UserBlock__Trash"></div>
       </div>
     </nav>
   );
 };
 
-export default Card;
+export default UserBlock;

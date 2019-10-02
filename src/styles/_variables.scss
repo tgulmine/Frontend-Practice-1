@@ -1,26 +1,28 @@
-/* NavTitle */
+/* Header */
 
-$navTitle__button--text-color: #fbe6df;
-$navTitle__button--bg-color: #eb8264;
-$navTitle__container--bg-color: #f0f0f0;
-$navTitle__container--padding-top: 6vh;
-$navTitle__container--height: 12vh;
-$navTitle__container--width: 100%;
-$navTitle__title--text-color: #525252;
+$header__button--text-color: #fbe6df;
+$header__button--bg-color: #eb8264;
+$header__container--bg-color: #f0f0f0;
+$header__container--padding-top: 6vh;
+$header__container--height: 12vh;
+$header__container--width: 100%;
+$header__title--text-color: #525252;
 
-/* NavSearch */
+/* SearchBar */
 
-$navSearch__image--size: 25px;
+$searchBar__image--size: 25px;
+$searchBar__container--height: 60px;
 
-/* NavOrder */
+/* OrderBar */
 
-$navOrder__button--font-size: 14px;
-$navOrder__buttonAluno--ml: 2%;
-$navOrder__buttonSituacao--ml: 20%;
-$navOrder__buttonPapel--ml: 12%;
-$navOrder__buttonAtualizado--ml: 20%;
+$orderBar__button--font-size: 14px;
+$orderBar__buttonAluno--ml: 2%;
+$orderBar__buttonSituacao--ml: 20%;
+$orderBar__buttonPapel--ml: 12%;
+$orderBar__buttonAtualizado--ml: 20%;
+$orderBar__container--height: 42px;
 
-/* Card */
+/* UserBlock */
 
-$card__imageTrash--size: 15px;
-$card__borderTrash--size: 28px;
+$userBlock__imageTrash--size: 15px;
+$userBlock__borderTrash--size: 28px;

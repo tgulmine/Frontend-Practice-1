@@ -1,0 +1,15 @@
+@import "../../styles/_variables.scss";
+
+.SearchBar__Image {
+  background-image: url(../../images/searchIcon.png);
+  height: $searchBar__image--size;
+  width: $searchBar__image--size;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-self: center;
+}
+
+.SearchBar__Container {
+  height: $searchBar__container--height;
+}

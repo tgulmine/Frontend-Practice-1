@@ -1,0 +1,16 @@
+@import "../../styles/_variables.scss";
+
+.UserBlock__Trash {
+  background-image: url(../../images/trash.png);
+  height: $userBlock__imageTrash--size;
+  width: $userBlock__imageTrash--size;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-self: center;
+
+  &--Border {
+    width: $userBlock__borderTrash--size;
+    height: $userBlock__borderTrash--size;
+  }
+}

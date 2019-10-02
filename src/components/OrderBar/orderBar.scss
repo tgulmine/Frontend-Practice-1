@@ -1,0 +1,23 @@
+@import "../../styles/_variables.scss";
+
+.OrderBar__Button {
+  font-size: $orderBar__button--font-size !important;
+  /* position: relative !important;
+
+  &--Aluno {
+    margin-left: $orderBar__buttonAluno--ml;
+  }
+  &--Situacao {
+    margin-left: $orderBar__buttonSituacao--ml;
+  }
+  &--Papel {
+    margin-left: $orderBar__buttonPapel--ml;
+  }
+  &--Atualizado {
+    margin-left: $orderBar__buttonAtualizado--ml;
+  } */
+}
+
+.OrderBar__Container {
+  height: $orderBar__container--height;
+}
