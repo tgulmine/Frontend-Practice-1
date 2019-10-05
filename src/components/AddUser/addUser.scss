@@ -1,6 +1,17 @@
 @import "../../styles/_variables.scss";
 
-/* .NavTitle__Button {
-  color: $navTitle__button--text-color !important;
-  background-color: $navTitle__button--bg-color !important;
-} */
+.AddUser__Container {
+  height: $addUser__container--height;
+}
+
+.AddUser__Form {
+  width: $addUser__form--width !important;
+}
+
+.AddUser__Button {
+  width: $addUser__button--width;
+
+  &--Salvar {
+    background-color: $addUser__buttonSalvar--bgColor !important;
+  }
+}

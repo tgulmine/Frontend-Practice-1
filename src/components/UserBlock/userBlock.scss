@@ -14,3 +14,30 @@
     height: $userBlock__borderTrash--size;
   }
 }
+
+.UserBlock__IconCircle {
+  font-size: $userBlock__IconCircle--font-size;
+
+  &--Ativo {
+    color: $addUser__buttonSalvar--bgColor;
+  }
+  &--Suspenso {
+    color: $header__button--bg-color;
+  }
+}
+
+.UserBlock__ButtonStatus {
+  font-size: $userBlock__ButtonStatus--font-size !important;
+
+  &--Ativo {
+    width: $userBlock__ButtonStatusAtivo--width;
+  }
+  &--Suspenso {
+    width: $userBlock__ButtonStatusSuspenso--width;
+    background-color: $userBlock__ButtonStatusSuspenso--bg-color !important;
+  }
+}
+
+.UserBlock__Container {
+  height: $userBlock__Container--height;
+}

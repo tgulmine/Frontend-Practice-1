@@ -115,7 +115,7 @@ const OrderBar: React.FC = () => {
             <FontAwesomeIcon icon={getIcon(PAPEL)} />
           </Button>
         </Col>
-        <Col>
+        <Col xs="3">
           <Button
             className="bg-transparent border-0 text-dark text-uppercase font-weight-bold OrderBar__Button"
             onClick={() => {

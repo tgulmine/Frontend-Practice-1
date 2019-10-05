@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./addUser.scss";
-import { Button, Row, Col, Input } from "reactstrap";
+import { Button, Row, Col, Input, Container } from "reactstrap";
 
 interface AddUserProps {
   onClickCancel: () => void;
@@ -9,50 +9,66 @@ interface AddUserProps {
 
 const AddUser: React.FC<AddUserProps> = props => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white w-100 d-flex flex-row justify-content-between align-items-center">
-      <div>
-        <form className="form-inline my-2 my-lg-0 ml-2 flex-grow-1">
-          <input
-            className="form-control mr-sm-2"
-            type="name"
-            placeholder="Nome"
-            aria-label="Nome"
-          ></input>
-        </form>
-      </div>
-      <div>
-        <form className="form-inline my-2 my-lg-0 ml-2 flex-grow-1">
-          <input
-            className="form-control mr-sm-2"
-            type="surname"
-            placeholder="Sobrenome"
-            aria-label="Sobrenome"
-          ></input>
-        </form>
-      </div>
-      <div>
-        <form className="form-inline my-2 my-lg-0 ml-2 flex-grow-1">
-          <input
-            className="form-control mr-sm-2"
-            type="email"
-            placeholder="E-mail"
-            aria-label="E-mail"
-          ></input>
-        </form>
-      </div>
-      <Button
-        className="font-weight-bold bg-white text-dark"
-        onClick={props.onClickCancel}
-      >
-        Cancelar
-      </Button>
-      <Button
-        className="font-weight-bold bg-success"
-        onClick={props.onClickSave}
-      >
-        Salvar
-      </Button>
-    </nav>
+    <Container className="AddUser__Container bg-white w-100 d-flex flex-row align-items-center m-0 p-0">
+      <Row className="w-100 ml-3 mr-3 p-0">
+        <Col
+          xs="3"
+          className="d-flex flex-row align-items-center justify-content-center p-0"
+        >
+          <form className="form-inline w-100 justify-content-center">
+            <input
+              className="AddUser__Form form-control font-weight-bold"
+              type="name"
+              placeholder="Nome"
+              aria-label="Nome"
+            ></input>
+          </form>
+        </Col>
+        <Col
+          xs="3"
+          className="d-flex flex-row align-items-center justify-content-center p-0"
+        >
+          <form className="form-inline w-100 justify-content-center">
+            <input
+              className="AddUser__Form form-control font-weight-bold"
+              type="surname"
+              placeholder="Sobrenome"
+              aria-label="Sobrenome"
+            ></input>
+          </form>
+        </Col>
+        <Col
+          xs="3"
+          className="d-flex flex-row align-items-center justify-content-center p-0"
+        >
+          <form className="form-inline w-100 justify-content-center">
+            <input
+              className="AddUser__Form form-control font-weight-bold"
+              type="email"
+              placeholder="E-mail"
+              aria-label="E-mail"
+            ></input>
+          </form>
+        </Col>
+        <Col
+          xs="3"
+          className="d-flex flex-row align-items-center justify-content-around p-0"
+        >
+          <Button
+            className="AddUser__Button font-weight-bold bg-white text-dark"
+            onClick={props.onClickCancel}
+          >
+            Cancelar
+          </Button>
+          <Button
+            className="AddUser__Button AddUser__Button--Salvar font-weight-bold"
+            onClick={props.onClickSave}
+          >
+            Salvar
+          </Button>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

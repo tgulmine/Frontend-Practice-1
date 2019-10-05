@@ -2,6 +2,7 @@
 
 $header__button--text-color: #fbe6df;
 $header__button--bg-color: #eb8264;
+$header__button--width: 140px;
 $header__container--bg-color: #f0f0f0;
 $header__container--padding-top: 6vh;
 $header__container--height: 12vh;
@@ -26,3 +27,16 @@ $orderBar__container--height: 42px;
 
 $userBlock__imageTrash--size: 15px;
 $userBlock__borderTrash--size: 28px;
+$userBlock__IconCircle--font-size: 8px;
+$userBlock__ButtonStatus--font-size: 14px;
+$userBlock__ButtonStatusAtivo--width: 80px;
+$userBlock__ButtonStatusSuspenso--width: 120px;
+$userBlock__ButtonStatusSuspenso--bg-color: #f0f0f0;
+$userBlock__Container--height: 70px;
+
+/* AddUser */
+
+$addUser__container--height: 70px;
+$addUser__form--width: 95%;
+$addUser__button--width: 45%;
+$addUser__buttonSalvar--bgColor: #23c084;
