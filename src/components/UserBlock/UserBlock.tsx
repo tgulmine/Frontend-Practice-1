@@ -41,57 +41,46 @@ const UserBlock: React.FC = () => {
 
   const [countPapel, setCountPapel] = useState(0); //0 = Aluno, 1 = Instrutor, 2 = Aluno + Instrutor
 
-  const renderPapel = () => {
-    if (countPapel === 0) {
-      if (isActive) {
-        return (
-          <Button
-            className="bg-transparent border-0 text-dark font-weight-bold UserBlock__Font--Ativo"
-            onClick={() => {
-              setCountPapel(countPapel + 1);
-            }}
-          >
-            <span className="mr-2">Aluno</span>
-            <FontAwesomeIcon icon={faAngleDown} />
-          </Button>
-        );
-      } else {
-        return (
-          <Button
-            className="bg-transparent border-0 text- font-weight-bold UserBlock__Font--Suspenso"
-            onClick={() => {
-              setCountPapel(countPapel + 1);
-            }}
-          >
-            <span className="mr-2">Aluno</span>
-            <FontAwesomeIcon icon={faAngleDown} />
-          </Button>
-        );
-      }
-    } else if (countPapel === 1) {
+  const basePapel = (papel: String, resetCounter: Boolean) => {
+    if (isActive) {
       return (
         <Button
-          className="bg-transparent border-0 text-dark font-weight-bold UserBlock__ButtonStatus"
+          className="bg-transparent border-0 text-dark font-weight-bold"
           onClick={() => {
-            setCountPapel(countPapel + 1);
+            setCountPapel(!resetCounter ? countPapel + 1 : 0);
           }}
         >
-          <span className="mr-2">Instrutor</span>
+          <span className="mr-2">{papel}</span>
+          <FontAwesomeIcon icon={faAngleDown} />
+        </Button>
+      );
+    } else {
+      return (
+        <Button
+          className="bg-transparent border-0 font-weight-bold UserBlock__Font--Suspenso"
+          onClick={() => {
+            setCountPapel(!resetCounter ? countPapel + 1 : 0);
+          }}
+        >
+          <span className="mr-2">{papel}</span>
           <FontAwesomeIcon icon={faAngleDown} />
         </Button>
       );
     }
-    return (
-      <Button
-        className="bg-transparent border-0 text-dark font-weight-bold UserBlock__ButtonStatus"
-        onClick={() => {
-          setCountPapel(0);
-        }}
-      >
-        <span className="mr-2">Aluno + Instrutor</span>
-        <FontAwesomeIcon icon={faAngleDown} />
-      </Button>
-    );
+  };
+
+  const renderPapel = () => {
+    if (countPapel === 0) return basePapel("Aluno", false);
+    else if (countPapel === 1) return basePapel("Instrutor", false);
+    else return basePapel("Aluno + Instrutor", true);
+  };
+
+  const renderData = () => {
+    if (isActive) {
+      return <span className="text-dark">22/01/2018</span>;
+    } else {
+      return <span className="UserBlock__Font--Suspenso">22/01/2018</span>;
+    }
   };
 
   return (
@@ -115,7 +104,7 @@ const UserBlock: React.FC = () => {
           {renderPapel()}
         </Col>
         <Col className="d-flex justify-content-center align-items-center text-dark font-weight-bolder">
-          22/01/2018
+          {renderData()}
         </Col>
       </Row>
       <div className="UserBlock__Trash--Border border d-flex justify-content-center align-items-center ml-3 mr-3">

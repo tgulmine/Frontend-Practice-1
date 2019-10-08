@@ -27,7 +27,7 @@
 }
 
 .UserBlock__ButtonStatus {
-  font-size: $userBlock__ButtonStatus--font-size !important;
+  /* font-size: $userBlock__ButtonStatus--font-size !important; */
 
   &--Ativo {
     width: $userBlock__ButtonStatusAtivo--width;
@@ -39,7 +39,7 @@
 }
 
 .UserBlock__Font {
-  font-size: $userBlock__ButtonStatus--font-size !important;
+  /* font-size: $userBlock__ButtonStatus--font-size !important; */
 
   &--Ativo {
     color: black;
