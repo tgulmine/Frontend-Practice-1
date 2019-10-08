@@ -38,6 +38,17 @@
   }
 }
 
+.UserBlock__Font {
+  font-size: $userBlock__ButtonStatus--font-size !important;
+
+  &--Ativo {
+    color: black;
+  }
+  &--Suspenso {
+    color: $userBlock__FontSuspenso-color !important;
+  }
+}
+
 .UserBlock__Container {
   height: $userBlock__Container--height;
 }

@@ -43,17 +43,31 @@ const UserBlock: React.FC = () => {
 
   const renderPapel = () => {
     if (countPapel === 0) {
-      return (
-        <Button
-          className="bg-transparent border-0 text-dark font-weight-bold UserBlock__ButtonStatus"
-          onClick={() => {
-            setCountPapel(countPapel + 1);
-          }}
-        >
-          <span className="mr-2">Aluno</span>
-          <FontAwesomeIcon icon={faAngleDown} />
-        </Button>
-      );
+      if (isActive) {
+        return (
+          <Button
+            className="bg-transparent border-0 text-dark font-weight-bold UserBlock__Font--Ativo"
+            onClick={() => {
+              setCountPapel(countPapel + 1);
+            }}
+          >
+            <span className="mr-2">Aluno</span>
+            <FontAwesomeIcon icon={faAngleDown} />
+          </Button>
+        );
+      } else {
+        return (
+          <Button
+            className="bg-transparent border-0 text- font-weight-bold UserBlock__Font--Suspenso"
+            onClick={() => {
+              setCountPapel(countPapel + 1);
+            }}
+          >
+            <span className="mr-2">Aluno</span>
+            <FontAwesomeIcon icon={faAngleDown} />
+          </Button>
+        );
+      }
     } else if (countPapel === 1) {
       return (
         <Button
