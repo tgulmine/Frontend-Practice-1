@@ -16,7 +16,7 @@ $searchBar__container--height: 60px;
 
 /* OrderBar */
 
-$orderBar__button--font-size: 14px;
+$orderBar__button--font-size: 12px;
 $orderBar__buttonAluno--ml: 2%;
 $orderBar__buttonSituacao--ml: 20%;
 $orderBar__buttonPapel--ml: 12%;
@@ -32,7 +32,7 @@ $userBlock__ButtonStatus--font-size: 14px;
 $userBlock__ButtonStatusAtivo--width: 80px;
 $userBlock__ButtonStatusSuspenso--width: 120px;
 $userBlock__ButtonStatusSuspenso--bg-color: #f0f0f0;
-$userBlock__FontSuspenso-color: #8d8d8d;
+$userBlock__FontSuspenso-color: #a5a5a5;
 $userBlock__Container--height: 70px;
 
 /* AddUser */
@@ -41,3 +41,9 @@ $addUser__container--height: 70px;
 $addUser__form--width: 95%;
 $addUser__button--width: 45%;
 $addUser__buttonSalvar--bgColor: #23c084;
+
+/* UserCard */
+
+$userCard__image--size: 40px;
+$userCard__TextEmail--font-size: 12px;
+$userCard__TextEmail--color: #a5a5a5;

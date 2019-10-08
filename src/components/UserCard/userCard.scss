@@ -1,0 +1,20 @@
+@import "../../styles/_variables.scss";
+
+.UserCard__Container {
+    height: $userBlock__Container--height * 0.8;
+}
+
+.UserCard__Image {
+    background-image: url(../../images/gai.jpg);
+    height: $userCard__image--size;
+    width: $userCard__image--size;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-self: center;
+}
+
+.UserCard__TextEmail {
+    font-size: $userCard__TextEmail--font-size;
+    color: $userCard__TextEmail--color;
+}

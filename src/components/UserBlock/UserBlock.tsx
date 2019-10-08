@@ -4,6 +4,7 @@ import { Input, Button, Container, Row, Col } from "reactstrap";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle, faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import UserCard from "../UserCard/UserCard";
 
 const UserBlock: React.FC = () => {
   const [isActive, setIsActive] = useState(true);
@@ -95,7 +96,7 @@ const UserBlock: React.FC = () => {
       />
       <Row className="w-100">
         <Col className="d-flex justify-content-center align-items-center">
-          User Card
+          <UserCard />
         </Col>
         <Col className="d-flex justify-content-center align-items-center">
           {renderStatusButton()}
