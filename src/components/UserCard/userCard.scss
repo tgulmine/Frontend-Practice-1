@@ -18,3 +18,12 @@
     font-size: $userCard__TextEmail--font-size;
     color: $userCard__TextEmail--color;
 }
+
+.UserCard__DisplayText {
+    /* overflow: hidden; */
+    white-space: nowrap;
+}
+
+.UserCard__LineHeight {
+    line-height: 1;
+}

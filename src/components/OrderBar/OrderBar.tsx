@@ -118,8 +118,10 @@ const OrderBar: React.FC = () => {
       />
       <Row className="w-100 no-gutters">
         <Col xs="3">{renderButton("Aluno", ALUNO)}</Col>
-        <Col xs="3">{renderButton("Situação", SITUATION)}</Col>
-        <Col xs="3">{renderButton("Papel", PAPEL)}</Col>
+        <Col xs="2" className="d-flex justify-content-center">
+          {renderButton("Situação", SITUATION)}
+        </Col>
+        <Col xs={{ size: 3, offset: 1 }}>{renderButton("Papel", PAPEL)}</Col>
         <Col xs="3">{renderButton("Atualizado em", UPDATED_AT)}</Col>
       </Row>
     </Container>

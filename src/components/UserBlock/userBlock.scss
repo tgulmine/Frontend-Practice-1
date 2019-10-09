@@ -28,6 +28,7 @@
 
 .UserBlock__ButtonStatus {
   /* font-size: $userBlock__ButtonStatus--font-size !important; */
+  height: $userBlock__ButtonStatus--height;
 
   &--Ativo {
     width: $userBlock__ButtonStatusAtivo--width;

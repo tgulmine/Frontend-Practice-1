@@ -14,7 +14,7 @@ const UserBlock: React.FC = () => {
       return (
         <Button
           className="bg-white border text-dark font-weight-bolder UserBlock__ButtonStatus 
-            UserBlock__ButtonStatus--Ativo d-flex flex-row justify-content-around align-items-center"
+            UserBlock__ButtonStatus--Ativo d-flex flex-row justify-content-around align-items-center pt-0 pb-0"
           onClick={() => setIsActive(false)}
         >
           <FontAwesomeIcon
@@ -28,7 +28,7 @@ const UserBlock: React.FC = () => {
     return (
       <Button
         className="border text-dark font-weight-bolder UserBlock__ButtonStatus 
-            UserBlock__ButtonStatus--Suspenso d-flex flex-row justify-content-around align-items-center"
+            UserBlock__ButtonStatus--Suspenso d-flex flex-row justify-content-around align-items-center pt-0 pb-0"
         onClick={() => setIsActive(true)}
       >
         <FontAwesomeIcon
@@ -46,7 +46,7 @@ const UserBlock: React.FC = () => {
     if (isActive) {
       return (
         <Button
-          className="bg-transparent border-0 text-dark font-weight-bold"
+          className="bg-transparent border-0 text-dark font-weight-bold pl-0 pr-0"
           onClick={() => {
             setCountPapel(!resetCounter ? countPapel + 1 : 0);
           }}
@@ -58,7 +58,7 @@ const UserBlock: React.FC = () => {
     } else {
       return (
         <Button
-          className="bg-transparent border-0 font-weight-bold UserBlock__Font--Suspenso"
+          className="bg-transparent border-0 font-weight-bold UserBlock__Font--Suspenso pl-0 pr-0"
           onClick={() => {
             setCountPapel(!resetCounter ? countPapel + 1 : 0);
           }}
@@ -95,22 +95,36 @@ const UserBlock: React.FC = () => {
         className="position-relative ml-3 mr-3"
       />
       <Row className="w-100">
-        <Col className="d-flex justify-content-center align-items-center">
+        <Col
+          xs="3"
+          className="d-flex justify-content-center align-items-center"
+        >
           <UserCard />
         </Col>
-        <Col className="d-flex justify-content-center align-items-center">
+        <Col
+          xs="2"
+          className="d-flex justify-content-center align-items-center"
+        >
           {renderStatusButton()}
         </Col>
-        <Col className="d-flex justify-content-center align-items-center">
+        <Col
+          xs={{ size: 3, offset: 1 }}
+          className="d-flex justify-content-start align-items-center"
+        >
           {renderPapel()}
         </Col>
-        <Col className="d-flex justify-content-center align-items-center text-dark font-weight-bolder">
+        <Col
+          xs="2"
+          className="d-flex justify-content-start align-items-center text-dark font-weight-bolder"
+        >
           {renderData()}
         </Col>
+        <Col xs="1" className="d-flex justify-content-start align-items-center">
+          <div className="UserBlock__Trash--Border border d-flex justify-content-center align-items-center">
+            <div className="UserBlock__Trash"></div>
+          </div>
+        </Col>
       </Row>
-      <div className="UserBlock__Trash--Border border d-flex justify-content-center align-items-center ml-3 mr-3">
-        <div className="UserBlock__Trash"></div>
-      </div>
     </Container>
   );
 };
