@@ -2,6 +2,7 @@
 
 $header__button--text-color: #fbe6df;
 $header__button--bg-color: #eb8264;
+$header__button--border-color: #C16B52;
 $header__button--width: 140px;
 $header__container--bg-color: #f0f0f0;
 $header__container--padding-top: 6vh;
@@ -12,6 +13,7 @@ $header__title--text-color: #525252;
 /* SearchBar */
 
 $searchBar__image--size: 25px;
+$searchBar__icon--font-size: 25px;
 $searchBar__container--height: 60px;
 
 /* OrderBar */
@@ -42,9 +44,17 @@ $addUser__container--height: 70px;
 $addUser__form--width: 95%;
 $addUser__button--width: 45%;
 $addUser__buttonSalvar--bgColor: #23c084;
+$addUser__buttonSalvar--border-color: #1EA571;
+$addUser__buttonCancel--border-color: rgb(202, 202, 202);
 
 /* UserCard */
 
 $userCard__image--size: 40px;
 $userCard__TextEmail--font-size: 12px;
 $userCard__TextEmail--color: #a5a5a5;
+
+/* Main */
+
+$main__border--radius: 0.2rem;
+$main__border--width: 0.18rem;
+$main__border--color: #e6e6e6;

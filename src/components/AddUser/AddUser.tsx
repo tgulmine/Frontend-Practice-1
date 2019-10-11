@@ -55,7 +55,7 @@ const AddUser: React.FC<AddUserProps> = props => {
           className="d-flex flex-row align-items-center justify-content-around p-0"
         >
           <Button
-            className="AddUser__Button font-weight-bold bg-white text-dark"
+            className="AddUser__Button AddUser__Button--Cancel font-weight-bold bg-white text-dark"
             onClick={props.onClickCancel}
           >
             Cancelar

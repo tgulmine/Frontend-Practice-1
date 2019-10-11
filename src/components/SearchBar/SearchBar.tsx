@@ -7,8 +7,11 @@ import {
   DropdownToggle,
   Container,
   Row,
-  Col
+  Col,
+  Button
 } from "reactstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 const SearchBar: React.FC = () => {
@@ -20,17 +23,22 @@ const SearchBar: React.FC = () => {
       className="SearchBar__Container bg-white w-100 d-flex flex-row align-items-center m-0 p-0"
       noGutters
     >
-      <Row className="w-100 no-gutters">
+      <Row className="w-100 mr-4">
         <Col
           xs="1"
-          className="d-flex align-items-center justify-content-center"
+          className="d-flex align-items-center justify-content-center p-0"
         >
-          <div className="SearchBar__Image ml-n3"></div>
+          <Button
+            className="border-0 d-flex justify-content-center align-items-center 
+                              bg-transparent text-dark p-0"
+          >
+            <FontAwesomeIcon className="SearchBar__Icon" icon={faSearch} />
+          </Button>
         </Col>
         <Col xs="9">
           <form className="form-inline ml-n4 w-100">
             <input
-              className="form-control border-0 w-100"
+              className="form-control border-0 w-100 Main__RemoveOutline"
               type="search"
               placeholder="Procurar usuário..."
               aria-label="Pesquisar"

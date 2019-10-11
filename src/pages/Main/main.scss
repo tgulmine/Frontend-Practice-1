@@ -17,3 +17,14 @@ body {
 
   /* margin-left: (100vw - $main__container--width) / 2; */
 }
+
+.Main__Border {
+  border-radius: $main__border--radius;
+  border: $main__border--width solid $main__border--color;
+  /* box-shadow: 0px 0px 10px 3px #cacaca; */
+}
+
+.Main__RemoveOutline:focus, .Main__RemoveOutline:active {
+  outline: none !important;
+  box-shadow: none !important;
+}

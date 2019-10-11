@@ -13,7 +13,7 @@ const Header: React.FC<HeaderProps> = props => {
     <div className="Header__Container">
       <div className="Header__Title h3 font-weight-bold">Usuários</div>
       <Button
-        className="Header__Button h5 font-weight-bold border-0 d-flex align-items-center justify-content-around"
+        className="Header__Button h5 font-weight-bold d-flex align-items-center justify-content-around"
         onClick={props.onClickAddUser}
       >
         <FontAwesomeIcon icon={faPlus} />

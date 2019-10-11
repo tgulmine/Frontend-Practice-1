@@ -10,6 +10,10 @@
   align-self: center;
 }
 
+.SearchBar__Icon {
+  font-size: $searchBar__icon--font-size;
+}
+
 .SearchBar__Container {
   height: $searchBar__container--height;
 }

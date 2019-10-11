@@ -13,5 +13,9 @@
 
   &--Salvar {
     background-color: $addUser__buttonSalvar--bgColor !important;
+    border-color: $addUser__buttonSalvar--border-color !important;
+  }
+  &--Cancel {
+    border-color: $addUser__buttonCancel--border-color !important;
   }
 }

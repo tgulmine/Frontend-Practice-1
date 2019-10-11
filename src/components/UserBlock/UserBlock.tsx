@@ -3,7 +3,11 @@ import "./userBlock.scss";
 import { Input, Button, Container, Row, Col } from "reactstrap";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle, faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCircle,
+  faAngleDown,
+  faTrash
+} from "@fortawesome/free-solid-svg-icons";
 import UserCard from "../UserCard/UserCard";
 
 const UserBlock: React.FC = () => {
@@ -120,9 +124,12 @@ const UserBlock: React.FC = () => {
           {renderData()}
         </Col>
         <Col xs="1" className="d-flex justify-content-start align-items-center">
-          <div className="UserBlock__Trash--Border border d-flex justify-content-center align-items-center">
-            <div className="UserBlock__Trash"></div>
-          </div>
+          <Button
+            className="UserBlock__Trash--Border border d-flex justify-content-center align-items-center 
+                              bg-transparent text-dark"
+          >
+            <FontAwesomeIcon className="UserBlock__Trash" icon={faTrash} />
+          </Button>
         </Col>
       </Row>
     </Container>

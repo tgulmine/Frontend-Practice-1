@@ -42,7 +42,7 @@ const App: React.FC = () => {
     <Container>
       <div className="Main__Container d-flex flex-column justify-content-start align-items-center">
         <Header onClickAddUser={onClickAddUserButton} />
-        <div className="d-flex flex-column justify-content-start align-items-center border rounded w-100">
+        <div className="d-flex flex-column justify-content-start align-items-center Main__Border w-100">
           <SearchBar />
           <OrderBar />
 
