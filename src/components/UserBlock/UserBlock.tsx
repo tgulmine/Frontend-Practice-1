@@ -103,7 +103,7 @@ const UserBlock: React.FC = () => {
           xs="3"
           className="d-flex justify-content-center align-items-center"
         >
-          <UserCard />
+          <UserCard isActive={isActive} />
         </Col>
         <Col
           xs="2"

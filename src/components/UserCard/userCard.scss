@@ -12,11 +12,27 @@
     background-size: cover;
     background-repeat: no-repeat;
     align-self: center;
+
+    &--Suspenso {
+        filter: opacity(50%);
+    }
+}
+
+.UserCard__TextName {
+    //wat
+
+    &--Suspenso {
+        color: $userCard__TextEmail--color;
+    }
 }
 
 .UserCard__TextEmail {
     font-size: $userCard__TextEmail--font-size;
     color: $userCard__TextEmail--color;
+
+    &--Suspenso {
+        color: $userCard__TextEmailSuspenso--color;
+    }
 }
 
 .UserCard__DisplayText {
